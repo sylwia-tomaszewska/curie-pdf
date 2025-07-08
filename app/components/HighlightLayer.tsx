@@ -1,7 +1,6 @@
 import { useSearchParams } from 'next/navigation';
 import { TextItem } from 'pdfjs-dist/types/src/display/api';
-import React, { useState, useEffect } from 'react';
-import { useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { highlightWords } from '../utils/highlightWords';
 
 export type HighlightedTextItem = Partial<TextItem> & {
@@ -90,7 +89,7 @@ const HighlightLayer = ({
               borderRadius: '2px',
               transition: 'all 0.2s ease',
             }}
-            title={`${highlight.type}: ${highlight.str}`}
+            title={`${highlight.type}: ${highlight.text}`}
           />
         ))}
     </div>

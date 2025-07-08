@@ -20,9 +20,12 @@ export default function Zoom() {
 
   return (
     <input
-      type='text'
+      type='number'
       name='scale'
       placeholder='Zoom'
+      min='0.5'
+      max='3'
+      step='0.1'
       onChange={(e) => handleZoom(e.target.value)}
       defaultValue={searchParams.get('scale')?.toString()}
       className='border-2 border-gray-300 rounded-md px-2 py-1'
